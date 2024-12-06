@@ -1,10 +1,22 @@
 # WorldInfoKV
 
-Exact matching of World Info entries to make WI more like a key/value store. Mostly unimplemented.
+Exact matching of World Info entries to make WI more like a key/value store.
+
+Mostly unimplemented, if it proves useful for people other than me I might try and get it merged.
+
+**Notes**:
+
+WI is not a KV store and it has many properties that make it unsuitable for that purpose.
+
+* The `key` field is not a key, it is for "keywords".
+
+* WI key fields are arrays! An entry can have multiple keys.
+
+* Key fields are not unique! This is by design. You're not "supposed" to be able to reference a specific entry by key.
 
 ## Features
 
-`/wikv-findentry`: adds `mode=` and `threshold=` 
+`/wikv-findentry`: adds `mode=` and `threshold=`
 
 ## Installation and Usage
 
@@ -13,6 +25,10 @@ Exact matching of World Info entries to make WI more like a key/value store. Mos
 Install extension via the SillyTavern [Extension Manager](https://docs.sillytavern.app/extensions/).
 
 ### Usage
+
+See context help for `/wikv-findentry` for details.
+
+### Testing
 
 ```
 // given actual key: "outfits-Galahad" |
